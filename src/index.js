@@ -42,7 +42,7 @@ const jsTypes = [
  * @param  {*}      value
  * @return {string}
  */
-const jsTypeIs = (value, options = {}) => {
+const jsTypeIs = (value) => {
   let type = Object.prototype.toString.call(value).slice(8, -1)
 
   if (type === 'Function') {
@@ -79,9 +79,5 @@ const jsTypeIs = (value, options = {}) => {
 
   return type
 }
-
-class Sample {}
-
-console.log('expect Sample -> ' + jsTypeIs(new Sample()))
 
 export default jsTypeIs
