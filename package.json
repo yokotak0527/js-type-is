@@ -1,8 +1,8 @@
 {
   "name": "@yokotak0527/js-type-is",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "return the value type on the browser",
-  "main": "dist/index.min.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint src",
@@ -10,7 +10,10 @@
     "build": "webpack --mode=production"
   },
   "keywords": [
-    "type,check,browser"
+    "type",
+    "util",
+    "check",
+    "browser"
   ],
   "author": "yokotak0527",
   "license": "MIT",
