@@ -42,7 +42,7 @@ const jsTypes = [
  * @param  {*}      value
  * @return {string}
  */
-const jsTypeIs = (value) => {
+module.exports = value => {
   let type = Object.prototype.toString.call(value).slice(8, -1)
 
   if (type === 'Function') {
@@ -79,5 +79,3 @@ const jsTypeIs = (value) => {
 
   return type
 }
-
-export default jsTypeIs

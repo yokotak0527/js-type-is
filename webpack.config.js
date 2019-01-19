@@ -8,8 +8,8 @@ module.exports = (env, args) => {
   // ===========================================================================
   let config = {
     mode: mode,
-    entry: path.resolve(__dirname, 'src/index.js'),
     output: {
+      filename: '[name].js',
       path: path.resolve(__dirname, 'dist'),
       library: 'jsTypeIs',
       libraryTarget: 'umd',
@@ -44,13 +44,17 @@ module.exports = (env, args) => {
 
     config.watch = true
     config.plugins.push(webpackNotifierPlugin)
-    config.output.filename = 'index.js'
+    config.entry = {
+      'index' : path.resolve(__dirname, 'src/index.js')
+    }
   }
   // =========================================================================
   // production mode settings
   // =========================================================================
   if (mode === 'production') {
-    config.output.filename = 'index.min.js'
+    config.entry = {
+      'index.min' : path.resolve(__dirname, 'src/index.js')
+    }
   }
 
   return config

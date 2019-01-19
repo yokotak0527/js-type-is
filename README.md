@@ -1,17 +1,25 @@
 # js-type-is
 
-If you want to check value types on the browser, this library may be useful.
-
-```
-import typeIs from '@yokotak0527/js-type-is'
-
-typeIs('hello') // String
-```
+If you want to check type of value on the browser, this library may be useful.
 
 # Install
 
 ```
 $ npm install @yokotak0527/js-type-is
+```
+
+# Usage
+
+```js
+import typeis from '@yokotak0527/js-type-is'
+typeis('hello') // String
+```
+
+when using CommonJS
+
+```js
+const typeis = require('@yokotak0527/js-type-is')
+typeis(1) // Number
 ```
 
 # Suppoert types
@@ -51,6 +59,6 @@ $ npm install @yokotak0527/js-type-is
  - ArrayBuffer
  - DataView
  - JSON
- - Promise'
+ - Promise
 
-and your defined type.
+And your defined types(class).
